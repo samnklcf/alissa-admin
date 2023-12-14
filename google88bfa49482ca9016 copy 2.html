@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exemple de bouton de copie de texte</title>
+</head>
+<body>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita praesentium non eligendi dolor maiores, enim obcaecati. Fugiat obcaecati suscipit, vitae debitis optio totam nisi consequatur et nesciunt culpa amet vel, molestiae veritatis quos porro sed. Officiis ducimus molestias, voluptate impedit quo iste deleniti quibusdam nesciunt voluptatum voluptates fugiat dicta. Unde tempora sint sunt facilis quibusdam odit earum inventore labore illo eum hic ea voluptatum, perferendis commodi eos officiis alias libero tenetur magni cumque a repellat deleniti nemo. Rerum harum eos beatae necessitatibus perferendis optio veritatis! Quaerat, dicta? Sint velit maxime exercitationem, est, accusamus nihil similique incidunt, vitae vel et adipisci placeat! Obcaecati dolorum sit eligendi, adipisci in explicabo atque ducimus debitis veritatis architecto magni veniam. Facilis, deleniti similique, unde nam recusandae explicabo tenetur nulla debitis libero optio blanditiis, iste assumenda alias. Vitae ipsum deleniti provident deserunt ab et tempore nisi animi amet neque. Quae tenetur iure voluptas dolorem eius suscipit soluta fugiat obcaecati tempora! Quos autem architecto error iste odio veniam, earum esse, quas alias omnis quam debitis, porro accusamus reprehenderit illo. Voluptates perferendis recusandae asperiores adipisci laudantium ratione deserunt eum, ipsa culpa eveniet repellendus eos similique illo ab harum, suscipit, earum doloribus. Natus maiores vero repellendus quo, corrupti error veniam minus voluptatem ipsum corporis. Dolorum quia beatae dolor quos praesentium odio sequi officia soluta, blanditiis, quaerat delectus? Sequi at repellendus asperiores tenetur ad. Soluta ducimus possimus aut voluptatum inventore expedita consequuntur blanditiis aliquam eaque suscipit cum debitis quasi perferendis numquam dolor laudantium iure, odit maiores consequatur eos. Corrupti, doloribus corporis blanditiis deserunt quos soluta asperiores sunt quidem. Accusantium quo, perspiciatis voluptatem exercitationem officiis distinctio repellendus hic pariatur tempore dolor itaque quidem doloribus, debitis facere sapiente at magnam minima magni voluptatum, adipisci perferendis? Tempore inventore officiis ipsum repellendus consequuntur, ipsam, qui deserunt ex dolorem velit distinctio molestias voluptatem accusantium commodi dolore consequatur ab nesciunt beatae minima expedita non veniam eum! Laudantium facere cum consequatur dicta magni labore tempora eius, debitis voluptatibus corrupti ipsum minus, sapiente sit praesentium ab! Earum, esse fugiat quibusdam deserunt molestias dicta voluptatem incidunt harum eveniet voluptatum expedita dolores obcaecati totam porro labore excepturi doloribus animi nesciunt debitis iusto ipsam, consectetur architecto officia natus. Beatae aliquam tempore illo deserunt explicabo odio doloribus a, placeat rerum dolore, cumque velit esse cupiditate qui fugiat delectus voluptatibus modi similique quae architecto totam dolores nihil nulla! Magni maiores quo laudantium voluptatem, corporis culpa, quibusdam optio rerum delectus eos, eveniet minus architecto?</p>
+	
+	<button onclick="shareText()">Partager le texte</button>
+
+<script>
+function shareText() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'Titre du texte',
+      text: 'Le texte que vous voulez partager',
+    })
+      .then(() => console.log('Texte partagé avec succès'))
+      .catch((error) => console.error('Erreur lors du partage du texte', error));
+  } else {
+    console.log('La fonction de partage n\'est pas disponible sur ce navigateur.');
+  }
+}
+</script>
+</body>
+</html>
